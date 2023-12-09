@@ -1,3 +1,6 @@
+import pathlib
+import os
+
 def file_reader(file_name):
     result = {}
     with open(file_name, encoding='utf-8') as recipes:
@@ -31,9 +34,6 @@ def get_shop_list_by_dishes(*dishes, person_count):
             print(f'В кулинарной книге нет блюда {dish}\n')
     return result_list
 
-# cook_book = file_reader('recipes.txt')
-# print(cook_book)
-# print()
-# print(get_shop_list_by_dishes('Омлет', 'Фахитос', 'Уха', person_count=2))
+
 print(file_reader('recipes.txt'))
-print(get_shop_list_by_dishes('Омлет', 'Фахитос', 'Уха', person_count=2))
+print(get_shop_list_by_dishes('Омлет', 'Фахитос', 'Уха', person_count = 2))
