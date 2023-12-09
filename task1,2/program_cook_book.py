@@ -1,9 +1,9 @@
-import pathlib
-import os
+import os.path
 
 def file_reader(file_name):
     result = {}
-    with open(file_name, encoding='utf-8') as recipes:
+    p = os.path.dirname(os.path.abspath(__file__))
+    with open(f'{p}\\recipes.txt', encoding='utf-8') as recipes:
         heads = ['ingredient_name', 'quantity', 'measure']
         for line in recipes:
             dish_name = line.strip()
